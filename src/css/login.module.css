@@ -1,0 +1,146 @@
+.Container{
+    width: 25rem;
+    height: 40rem;
+    background: rgba(255, 255, 255, 0.81);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ContainerImg img{
+    padding-top: 1.9rem;
+    max-width: 95px;
+}
+
+.ContainerForm{ 
+    width: 100%;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.ContainerLabelInput{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0.9rem;
+}
+.ContainerLabelInput label{
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    padding: 0.5rem;
+    color: #323D40;
+}
+.ContainerLabelInput input{
+    width: 360px;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    background-color: hsl(0, 0%, 100%);
+    border-color: hsl(0, 0%, 80%);
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+    cursor: default;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    align-self: center;
+    -webkit-box-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    min-height: 38px;
+    outline: 0!important;
+    position: relative;
+    -webkit-transition: all 100ms;
+    transition: all 100ms;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+.ContainerLabelSelect{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1.5rem;
+}
+.ContainerLabelSelect label{
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    color: #323D40;
+}
+.SelectComponent{
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+
+.ContainerErrors{
+    font-size: 12px;
+    font-weight: 900;
+    color: red;
+    margin: 0.5rem;
+}
+
+.ContainerBotao{
+    display: flex;
+    justify-content: center;
+}
+
+.ContainerBotao button{
+	cursor:pointer;
+	color:#518C81;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:12px 30px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+    border: none;
+    background: #80F2E7;
+    box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+}
+
+.ContainerBotao button:hover {
+	background-color:#45e2d2;
+}
+.ContainerBotao button:active {
+	position:relative;
+	top:1px;
+}
+
+.ContainerCadRecSenha{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 5rem;
+    padding: 0;
+    margin: 0;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+

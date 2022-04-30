@@ -1,11 +1,14 @@
 import React from "react";
 import { useFormik } from "formik";
-import SelectCustomisadoRpm from "../../componentGlobal/SelectCustomisadoRpm"
+import SelectCustomisadoRpm from "../../componentGlobal/SelectCustomisadoRpm";
+import LoginStyle from "../../css/login.module.css";
+import VerbinnhoImg from "../../img/logo.png";
+
 const options =[
-    {value: 0,label:'Sala 1, crianças de 4 a 5 Anos'},
-    {value: 1,label:'Sala 2, crianças de 6 a 7 Anos'},
-    {value: 2,label:'Sala 3, crianças de 8 a 11 Anos'},
-    {value: 3,label:'Sala administrativa'},
+    {value: 1,label:'Salinha 3 a 4 Ano'},
+    {value: 2,label:'Salinha 5 a 7 Ano'},
+    {value: 3,label:'Salinha 8 a 11 Ano'},
+    {value: 4,label:'ADM'},
 ];
 
 function LoginComponent() {
@@ -14,16 +17,25 @@ function LoginComponent() {
     const validate = values =>{
         const errors = {};
 
-        if(!values.email){
-            errors.email = "preencha com um e-mail valido";
+        if(!values.usuario){
+            errors.usuario = "O campo do usuário não pode ficar vazio !";
+        }
+
+        if(!values.senha){
+            errors.senha = "O campo da senha não pode ficar vazio !";
+        }
+
+        if(values.sala == 0){
+            errors.sala = "Escolha uma salinha !";
         }
         return errors;
     }
 
     const formik = useFormik({
         initialValues:{
-            email: "email@exemplo.com",
-            sala: "Escolha a Sua Salinha"
+            usuario: "email@exemplo.com",
+            senha: "*********",
+            sala: 0
         },
         validate,
         onSubmit: value=>{
@@ -32,28 +44,56 @@ function LoginComponent() {
     });
 
     return(
-        <form onSubmit={formik.handleSubmit}>
-            <div className="login-container">
-                <label htmlFor="email">Informe seu Email</label>
-                <input
-                name="email"
-                id="email"
-                type="email"
-                onChange={formik.handleChange}
-                value={formik.values.email}/>
-            </div>
+       <div className={LoginStyle.Container}>
+           <div className={LoginStyle.ContainerImg}>
+               <img src={VerbinnhoImg} alt="Verbinho Ibura"/>
+           </div>
+           <div className={LoginStyle.ContainerForm}>
+                <form onSubmit={formik.handleSubmit}>
 
-            <div>
-                <label htmlFor="email">Qual é sua Salinha ?</label>
-                <SelectCustomisadoRpm
-                    options={options}
-                    value={formik.values.email}
-                    onChange={ value=>formik.setFieldValue('sala',value.value) }
-                />
-            </div>
-            {formik.errors.email ? <div className="errors">{formik.errors.email}</div> :  null }
-            <button type="submit">Registrar</button>
-        </form>
+                    <div className={LoginStyle.ContainerLabelInput}>
+                        <label htmlFor="usuario">Informe seu Usuário ou E-mail:</label>
+                        <input
+                        name="usuario"
+                        id="usuario"
+                        type="usuario"
+                        onChange={formik.handleChange}
+                        value={formik.values.usuario}/>
+                        {formik.errors.usuario ? <div className={LoginStyle.ContainerErrors}>{formik.errors.usuario}</div> :  null }
+                    </div>
+
+                    <div className={LoginStyle.ContainerLabelInput}>
+                        <label htmlFor="senha">Informe sua senha:</label>
+                        <input
+                        name="senha"
+                        id="senha"
+                        type="password"
+                        onChange={formik.handleChange}
+                        value={formik.values.senha}/>
+                        {formik.errors.senha ? <div className={LoginStyle.ContainerErrors}>{formik.errors.senha}</div> :  null }
+                    </div>
+                    
+                    <div className={LoginStyle.ContainerLabelSelect}>
+                        <label htmlFor="email">Qual é sua Salinha ?</label>
+                            <SelectCustomisadoRpm
+                                className={LoginStyle.SelectComponent}
+                                options={options}
+                                value={formik.values.sala}
+                                onChange={ value=>formik.setFieldValue('sala',value.value) }
+                            />
+                            {formik.errors.sala ? <div className={LoginStyle.ContainerErrors}>{formik.errors.sala}</div> :  null }
+                    </div>
+
+                    <div className={LoginStyle.ContainerBotao}>
+                        <button type="submit">ENTRAR</button>
+                    </div>
+                </form>
+           </div>
+           <div className={LoginStyle.ContainerCadRecSenha}>
+               <div>cadastro</div>
+               <div>esqueci a senha</div>
+           </div>
+       </div>
     );
 }
 

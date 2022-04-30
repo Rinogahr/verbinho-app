@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import './css/style-global.modules.css';
 import  LoginComponent  from './app/login/Login.jsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
