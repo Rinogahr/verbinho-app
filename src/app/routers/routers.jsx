@@ -9,7 +9,7 @@ function RoutersComponent(){
     return(
     <BrowserRouter>
         <Routes>
-            <Route path='/login' element={<LoginComponent />}/>
+            <Route path='/' element={<LoginComponent />}/>
             <Route path='/cadastro' element={<CadastroComponent />}/>
             <Route path='/recSenha' element={<RecuperarSenhaComponent />}/>
         </Routes>
