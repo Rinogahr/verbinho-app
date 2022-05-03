@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useFormik } from "formik";
 import SelectCustomisadoRpm from "../../componentGlobal/SelectCustomisadoRpm";
-import LoginStyle from "../../css/login.module.css";
+import LoginStyle from "./login.module.css";
 import VerbinnhoImg from "../../img/logo.png";
 
 const options =[
@@ -34,7 +35,7 @@ function LoginComponent() {
     const formik = useFormik({
         initialValues:{
             usuario: "email@exemplo.com",
-            senha: "*********",
+            senha: "",
             sala: 0
         },
         validate,
@@ -90,11 +91,20 @@ function LoginComponent() {
                 </form>
            </div>
            <div className={LoginStyle.ContainerCadRecSenha}>
-               <div>cadastro</div>
-               <div>esqueci a senha</div>
+               <div>
+                   <Link to="/cadastro">Cadastre-se</Link>
+               </div>
+               <div>
+                   <a href="../recSenha">Escqueceu a senha?</a>
+               </div>
            </div>
        </div>
     );
+
+    function cleanCampo(){
+        let el = document.getElementById("usuario");
+        el.value = '';
+    }
 }
 
-export default LoginComponent;
+export  {LoginComponent};
