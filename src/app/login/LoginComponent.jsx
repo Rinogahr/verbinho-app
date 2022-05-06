@@ -92,10 +92,10 @@ function LoginComponent() {
            </div>
            <div className={LoginStyle.ContainerCadRecSenha}>
                <div>
-                   <Link to="/cadastro">Cadastre-se</Link>
+                   <Link to="/verbinho-app-site/cadastro">Cadastre-se</Link>
                </div>
                <div>
-                   <a href="../recSenha">Escqueceu a senha?</a>
+                    <Link to="/verbinho-app-site/recSenha">Escqueceu a senha?</Link>
                </div>
            </div>
        </div>
