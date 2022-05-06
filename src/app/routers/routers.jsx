@@ -9,7 +9,7 @@ function RoutersComponent(){
     return(
     <BrowserRouter>
         <Routes>
-            <Route path='/' element={<LoginComponent />}/>
+            <Route path='https://rinogahr.github.io/verbinho-app-site/' element={<LoginComponent />}/>
             <Route path='/cadastro' element={<CadastroComponent />}/>
             <Route path='/recSenha' element={<RecuperarSenhaComponent />}/>
         </Routes>
