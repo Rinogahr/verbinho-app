@@ -12,7 +12,7 @@ function CadastroComponent() {
         <div className={CadStyle.Container}>
             <div className={CadStyle.titulo}>
                 <div>
-                    <Link to={"/"}>X</Link>
+                    <Link to={"/verbinho-app-site"}>X</Link>
                 </div>
                 <div>CADASTRO DE USÁRIO</div>
             </div>

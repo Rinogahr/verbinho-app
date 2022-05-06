@@ -10,8 +10,8 @@ function RoutersComponent(){
     <BrowserRouter>
         <Routes>
             <Route path='/verbinho-app-site' element={<LoginComponent />}/>
-            <Route path='/cadastro' element={<CadastroComponent />}/>
-            <Route path='/recSenha' element={<RecuperarSenhaComponent />}/>
+            <Route path='/verbinho-app-site/cadastro' element={<CadastroComponent />}/>
+            <Route path='/verbinho-app-site/recSenha' element={<RecuperarSenhaComponent />}/>
         </Routes>
     </BrowserRouter>
     );
