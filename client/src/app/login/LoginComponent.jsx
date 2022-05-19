@@ -39,7 +39,7 @@ function LoginComponent() {
             sala: 0
         },
         validate,
-        onSubmit: value=>{
+        onSubmit: value => {
             console.log(value);
         }
     });
