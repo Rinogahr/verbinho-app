@@ -4,6 +4,7 @@ import { useFormik } from "formik";
 import SelectCustomisadoRpm from "../../componentGlobal/SelectCustomisadoRpm";
 import LoginStyle from "./login.module.css";
 import VerbinnhoImg from "../../img/logo.png";
+import { InputSplitRpm } from "../../componentGlobal/InputSplitRpm";
 
 const options =[
     {value: 1,label:'Salinha 3 a 4 Ano'},
@@ -98,6 +99,7 @@ function LoginComponent() {
                     <Link to="/verbinho-app-site/recSenha">Escqueceu a senha?</Link>
                </div>
            </div>
+           <InputSplitRpm/>
        </div>
     );
 
