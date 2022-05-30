@@ -1,7 +1,7 @@
 import React from "react";
 import styleimput from "../css/styleimput.module.css";
 
-function InputSplitRpm(){
+function InputSplitRpm({plHolder,txtLabel,nameFor, onChange, inputVl}){
     return(
         <div className={styleimput.inputContainer}>
             <input
@@ -9,9 +9,11 @@ function InputSplitRpm(){
                 id="username"
                 className={styleimput.textInput}
                 autoComplete="off"
-                placeholder="Digite Aqui"
+                placeholder={plHolder}
+                onChange={onChange}
+                value={inputVl}
             />
-            <label for="username" className={styleimput.label}>Teste</label>
+            <label for={nameFor} className={styleimput.label}>{txtLabel}</label>
         </div>
     );
 }

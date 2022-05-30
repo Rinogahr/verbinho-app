@@ -99,7 +99,11 @@ function LoginComponent() {
                     <Link to="/verbinho-app-site/recSenha">Escqueceu a senha?</Link>
                </div>
            </div>
-           <InputSplitRpm/>
+           <InputSplitRpm
+           plHolder="Usuário"
+           txtLabel="Informe seu Usuário ou E-mail:"
+           nameFor="usuaraio"
+           />
        </div>
     );
 
